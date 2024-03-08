@@ -1,0 +1,22 @@
+/*========================== Font Faces ==========================*/
+
+@font-face {
+  font-family: 'Samsung Sharp Sans Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Samsung Sharp Sans Regular'), url(../../assets/fonts/samsungsharpsans.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Samsung Sharp Sans Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Samsung Sharp Sans Medium'), url(../../assets/fonts/samsungsharpsans-medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Samsung Sharp Sans Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Samsung Sharp Sans Bold'), url(../../assets/fonts/samsungsharpsans-bold.woff) format('woff');
+}

@@ -1,0 +1,16 @@
+/*========================== Variables ==========================*/
+
+:root {
+  --color-primary: #253b3f; 
+  --color-secondary: #717174; 
+
+  --font-regular : 'Samsung Sharp Sans Regular';
+  --font-medium : 'Samsung Sharp Sans Medium';
+  --font-bold : 'Samsung Sharp Sans Bold';
+
+  --font-size-regular : 15px;
+  --font-size-1 : 42px;
+  --font-size-2 : 30px;
+  --font-size-3 : 20px;
+  --font-size-4: 13px;
+}

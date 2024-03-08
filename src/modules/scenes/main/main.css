@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color:  white;
+  background-color: #e8e8e8;
   color: var(--color-primary);
   font-family: var(--font-regular);
   font-size: var(--font-size-regular);
@@ -17,25 +17,25 @@ body {
 
 /*========================== Font style ==========================*/
 
-.text-bold{
+.text-bold {
   font-family: var(--font-bold);
 }
 
-.text-medium{
+.text-medium {
   font-family: var(--font-medium);
 }
 
 /*========================== Font size ==========================*/
 
-.font-size-1{
+.font-size-1 {
   font-size: var(--font-size-1);
 }
 
-.font-size-2{
+.font-size-2 {
   font-size: var(--font-size-2);
 }
 
-.font-size-3{
+.font-size-3 {
   font-size: var(--font-size-3);
 }
 
@@ -45,10 +45,19 @@ body {
 
 /*========================== Font color ==========================*/
 
-.font-color-primary{
+.font-color-primary {
   color: var(--color-primary);
 }
 
-.font-color-secondary{
+.font-color-secondary {
   color: var(--color-secondary);
+}
+
+/*========================== Main container ==========================*/
+
+.main-container {
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe,
+    -15px -15px 30px #ffffff;
 }

@@ -1,15 +1,15 @@
 import React from 'react'
 import './main.css'
+import { Header, Workspace } from '../../components'
 
-interface MainProps { }
-
-export const Main: React.FC<MainProps> = props => {
+export const Main: React.FC = () => {
 
   return (
     <div className="container-fluid">
-      <div className="row bg-warning justify-content-center">
-        <div className="col col-6 p-5 bg-primary">
-    x
+      <div className="row justify-content-center">
+        <div className="col col-auto p-4 m-5 main-container ">
+          <Header />
+          <Workspace />
         </div>
       </div>
     </div>

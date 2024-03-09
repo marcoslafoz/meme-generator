@@ -1,6 +1,9 @@
 @import url("/src/assets/styles/variables.css");
 @import url("/src/assets/styles/fonts.css");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /*========================== Default ==========================*/
 

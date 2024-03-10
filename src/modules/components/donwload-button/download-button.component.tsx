@@ -11,20 +11,13 @@ export const DownloadButton: React.FC = () => {
         domtoimage.toPng(contentToExport)
           .then((dataUrl: string) => {
             const link = document.createElement('a')
-            link.download = 'exported_image.png'
+            link.download = 'meme-generator.png'
             link.href = dataUrl
             link.click()
           })
-          .catch((error: any) => {
-            console.error('Error al exportar la imagen:', error)
-          })
-      }, 500) 
-    } else {
-      console.error('No se encontró el elemento con el id "contentToExport"')
+      }, 1)
     }
   }
-
-  
 
   return (
     <button className="download_button" type="button" onClick={handleExportClick}>

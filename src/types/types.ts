@@ -1,18 +1,11 @@
-export interface SkillType {
-  name: string;
-  percentage: number
-}
-
-export interface SkillsCategoryType {
-  name: string;
-  icon: any;
-  skills: SkillType[];
-}
-
-export interface ProjectType {
-  previewImg: any
-  name: string
-  description: string
-  website: string
-  github: string
+export interface optionsForm {
+  image: string
+  filtre: string
+  text: string
+  fontColor: string
+  fontSize: number
+  
+  animal: string
+  color: string
+  number: number
 }

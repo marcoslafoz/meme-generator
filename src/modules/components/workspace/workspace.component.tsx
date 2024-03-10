@@ -1,31 +1,33 @@
 import React from 'react'
 import { Canvas } from './canvas.component'
-import { Select, SelectItem } from "@nextui-org/react"
+import { Form } from './form.component'
+import { optionsForm } from '../../../types'
+
+export const defaultOptions: optionsForm = {
+  animal: '',
+  color: '',
+  number: 0,
+  filtre: '',
+  fontColor: '',
+  fontSize: 12,
+  image: 'https://placehold.co/600x400/333333/fff/?text=Crea+tu+propio+meme',
+  text: '',
+}
 
 export const Workspace: React.FC = () => {
 
-  const animals = [
-    { value: 'dog', label: 'Dog' },
-    { value: 'cat', label: 'Cat' },
-    { value: 'bird', label: 'Bird' },
-    // Puedes agregar más animales aquí según sea necesario
-  ];
+  const [options, setOptions] = React.useState<optionsForm>(defaultOptions)
+
+  const handleSelectionChange = (selection: optionsForm) => {
+    setOptions(selection)
+  }
 
   return (
     <div className="row justify-content-center p-3">
-
-      <div className="col col-auto w-75"><Canvas /></div>
-      <Select
-        label="Select an animal"
-        className="max-w-xs"
-      >
-        {animals.map((animal) => (
-          <SelectItem key={animal.value} value={animal.value}>
-            {animal.label}
-          </SelectItem>
-        ))}
-      </Select>
+      <div className="col col-auto w-75">
+        <div className="row"><Canvas options={options} /></div>
+        <div className="row"><Form onSelectionChange={handleSelectionChange} /></div>
+      </div>
     </div>
   )
 }
-

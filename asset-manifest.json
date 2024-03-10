@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.3a602c5c.css",
+    "main.css": "/static/css/main.fa40ab5e.css",
     "main.js": "/static/js/main.eb9441ab.js",
     "static/js/453.637b1628.chunk.js": "/static/js/453.637b1628.chunk.js",
     "static/media/samsungsharpsans-bold.woff": "/static/media/samsungsharpsans-bold.a3d2fc0b2ed47686941b.woff",
     "static/media/samsungsharpsans-medium.woff": "/static/media/samsungsharpsans-medium.5d992ee0ac0fb8516f0f.woff",
     "static/media/samsungsharpsans.woff": "/static/media/samsungsharpsans.769f64ac016899cfcaa1.woff",
     "index.html": "/index.html",
-    "main.3a602c5c.css.map": "/static/css/main.3a602c5c.css.map",
+    "main.fa40ab5e.css.map": "/static/css/main.fa40ab5e.css.map",
     "main.eb9441ab.js.map": "/static/js/main.eb9441ab.js.map",
     "453.637b1628.chunk.js.map": "/static/js/453.637b1628.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a602c5c.css",
+    "static/css/main.fa40ab5e.css",
     "static/js/main.eb9441ab.js"
   ]
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Canvas } from './canvas.component'
 import { Form } from './form.component'
 import { optionsForm } from '../../../types'
+import { DownloadButton } from '../donwload-button'
 
 export const defaultOptions: optionsForm = {
   animal: '',
@@ -9,9 +10,10 @@ export const defaultOptions: optionsForm = {
   number: 0,
   filtre: '',
   fontColor: '',
-  fontSize: 12,
-  image: 'https://placehold.co/600x400/333333/fff/?text=Crea+tu+propio+meme',
+  fontSize: 20,
+  image: '',
   text: '',
+  fontFamily: 'Samsung Sharp Sans Regular'
 }
 
 export const Workspace: React.FC = () => {
@@ -23,10 +25,11 @@ export const Workspace: React.FC = () => {
   }
 
   return (
-    <div className="row justify-content-center p-3">
-      <div className="col col-auto w-75">
-        <div className="row"><Canvas options={options} /></div>
-        <div className="row"><Form onSelectionChange={handleSelectionChange} /></div>
+    <div className="row justify-content-center px-3">
+      <div className="col col-auto pt-4 pb-3">
+        <div className="row justify-content-center mb-3"><Canvas options={options} /></div>
+        <div className="row "><Form onSelectionChange={handleSelectionChange} /></div>
+        <div className="row justify-content-center"><DownloadButton /></div>
       </div>
     </div>
   )

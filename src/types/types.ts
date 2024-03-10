@@ -4,7 +4,7 @@ export interface optionsForm {
   text: string
   fontColor: string
   fontSize: number
-  
+  fontFamily: string
   animal: string
   color: string
   number: number

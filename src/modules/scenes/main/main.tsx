@@ -7,7 +7,7 @@ export const Main: React.FC = () => {
   return (
     <div className="container-fluid">
       <div className="row justify-content-center">
-        <div className="col col-auto p-4 m-5 main-container ">
+        <div className="col col-auto py-2 mt-4 main-container ">
           <Header />
           <Workspace />
         </div>

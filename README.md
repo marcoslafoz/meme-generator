@@ -1,9 +1,5 @@
 # Práctica 10: Creación de una aplicación de edición de memes
 
-<div align="center">
-  <img src="https://i.imgur.com/42RVls9.jpg" alt="Descripción de la imagen" height="500px">
-</div>
-
 ## Descripción
 Desarrolla una aplicación web para la edición y creación de memes, permitiendo a los usuarios crear imágenes humorísticas personalizadas con texto superpuesto. La aplicación debe ser fácil de usar y ofrecer una amplia variedad de plantillas de memes populares, así como herramientas de edición para personalizar las imágenes.
 

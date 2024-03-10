@@ -2,7 +2,7 @@
   border-radius: 8px;
   overflow: hidden;
   max-width: 450px;
-  background-color: black;
+  background-color: #303030;
 }
 
 .canvas-img {
@@ -14,7 +14,7 @@
 
 .canvas-text {
   overflow: hidden;
-  background-color: black;
+  background-color: #303030;
 
   p {
     white-space: pre-wrap;

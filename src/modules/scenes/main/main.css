@@ -18,6 +18,10 @@ body {
   font-size: var(--font-size-regular);
 }
 
+.container-fluid{
+  min-height: 100vh;
+}
+
 /*========================== Font style ==========================*/
 
 .text-bold {

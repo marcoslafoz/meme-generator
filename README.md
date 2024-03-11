@@ -13,6 +13,3 @@ Desarrolla una aplicación web para la edición y creación de memes, permitiend
 ## Escalabilidad
 - **Nivel Básico:** Comienza con una selección limitada de plantillas de memes y funciones básicas de edición de imágenes.
 - **Nivel Avanzado:** Amplía el sistema con características avanzadas como la integración de reconocimiento de texto para sugerir memes basados en subtítulos, la creación de perfiles de usuario para guardar memes favoritos, o la implementación de herramientas de análisis para rastrear la popularidad de los memes.
-  
-## toDO Tasks
-  - Descargar  fuentes, al descargar la foto no se descarga con la fuente porque no estan localmente

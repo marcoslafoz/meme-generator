@@ -79,8 +79,8 @@ export const CollectionModal: React.FC<CollectionModalProps> = props => {
                   />
                 </div>
                 <div className='col col-auto p-0'>
-                  <button className="twitter-button" type="button" onClick={onClearCollection}>
-                    <span><img className="twitter-button-img" src={TrashCanIcon} alt='twitter' /></span>
+                  <button className="small-button" type="button" onClick={onClearCollection}>
+                    <span><img className="small-button-img" src={TrashCanIcon} alt='twitter' /></span>
                   </button>
                 </div>
 

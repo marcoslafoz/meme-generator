@@ -4,6 +4,7 @@ import { filtersData, fontFamilyData } from '../../utils/optionsData'
 import { memeType } from '../../../types'
 import { defaultOptions } from './workspace.component'
 import { Input } from "@nextui-org/react"
+import TrashCanIcon from '../../../assets/img/trash-can.svg'
 import './workspace.css'
 
 interface FormProps {
@@ -11,9 +12,7 @@ interface FormProps {
 }
 
 export const Form: React.FC<FormProps> = props => {
-
   const { onSelectionChange } = props
-
   const [selection, setSelection] = useState<memeType>(defaultOptions)
 
   const handleSelectionChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement> | number[] | number, type: string) => {
@@ -27,16 +26,27 @@ export const Form: React.FC<FormProps> = props => {
     onSelectionChange(updatedSelection)
   }
 
-  return (
+  const handleClearImage = () => {
+    setSelection({ ...selection, image: "" })
+    onSelectionChange({ ...selection, image: "" })
+  }
 
+  return (
     <div className="col">
 
-      <div className="row py-1">
-        <Input type="text" label="Texto" size={'md'} placeholder="Introduzca su texto..." onChange={(e) => handleSelectionChange(e, 'text')} />
+      <div className="row py-1 align-items-center pr-2 ">
+        <div className="col">
+          <Input type="url" label="Imágen" size={'md'} placeholder="Introduzca la url de su imágen..." value={selection.image} onChange={(i) => handleSelectionChange(i, 'image')} />
+        </div>
+        <div className='col col-auto p-0 mr-2'>
+          <button className="small-button" type="button" onClick={handleClearImage}>
+            <span><img className="small-button-img" src={TrashCanIcon} alt='clear' /></span>
+          </button>
+        </div>
       </div>
 
       <div className="row py-1">
-        <Input type="url" label="Imagen" size={'md'} placeholder="Introduzca la url de su imágen..." onChange={(e) => handleSelectionChange(e, 'image')} />
+        <Input type="text" label="Texto" size={'md'} placeholder="Introduzca su texto..." onChange={(t) => handleSelectionChange(t, 'text')} />
       </div>
 
       <hr className='my-4' />
@@ -67,7 +77,7 @@ export const Form: React.FC<FormProps> = props => {
 
           <div className="row align-items-center">
             <div className='col col-auto'>Color de texto:</div>
-            <div className='col col-auto'><Input className='color-input' defaultValue='#ffffff' type="color" size={'md'} placeholder="Introduzca la url de su imágen..." onChange={(e) => handleSelectionChange(e, 'fontColor')} /></div>
+            <div className='col col-auto'><Input className='color-input' defaultValue='#e0e0e0' type="color" size={'md'} placeholder="Introduzca la url de su imágen..." onChange={(e) => handleSelectionChange(e, 'fontColor')} /></div>
           </div>
         </div>
         <div className="col">
@@ -95,11 +105,6 @@ export const Form: React.FC<FormProps> = props => {
           onChange={(e) => handleSelectionChange(e, 'fontSize')}
         />
       </div>
-
-
-
-
-
     </div>
   )
 }

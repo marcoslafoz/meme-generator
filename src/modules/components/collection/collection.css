@@ -1,4 +1,4 @@
-.collection-modal{
+.collection-modal {
   background-color: #e8e8e8;
 }
 
@@ -20,17 +20,6 @@
   object-fit: contain;
 }
 
-.canvas-text {
-  overflow: hidden;
-  background-color: #303030;
-
-  p {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    color: #fff;
-  }
-
-}
 
 .like-button {
   --main-focus: #2d8cf0;
@@ -120,7 +109,7 @@
   box-shadow: 0px 0px var(--main-color);
 }
 
-.twitter-button {
+.small-button {
   --main-focus: #2d8cf0;
   --font-color: #323232;
   --bg-color-sub: #dedede;
@@ -139,7 +128,7 @@
   background-color: var(--bg-color-sub);
 }
 
-.twitter-button-img {
+.small-button-img {
   width: 20px;
   margin: 5px;
 }

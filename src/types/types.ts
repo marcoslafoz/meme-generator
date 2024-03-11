@@ -5,4 +5,6 @@ export interface memeType {
   fontColor: string
   fontSize: number
   fontFamily: string
+  template: string
+  id: string
 }

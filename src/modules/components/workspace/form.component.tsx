@@ -27,8 +27,13 @@ export const Form: React.FC<FormProps> = props => {
   }
 
   const handleClearImage = () => {
-    setSelection({ ...selection, image: "" })
-    onSelectionChange({ ...selection, image: "" })
+    const clearedSelection = {
+      ...selection,
+      image: '',
+      text: '',
+    }
+    setSelection(clearedSelection)
+    onSelectionChange(clearedSelection)
   }
 
   return (
@@ -46,14 +51,14 @@ export const Form: React.FC<FormProps> = props => {
       </div>
 
       <div className="row py-1">
-        <Input type="text" label="Texto" size={'md'} placeholder="Introduzca su texto..." onChange={(t) => handleSelectionChange(t, 'text')} />
+        <Input type="text" label="Texto" size={'md'} placeholder="Introduzca su texto..." value={selection.text} onChange={(t) => handleSelectionChange(t, 'text')} />
       </div>
 
       <hr className='my-4' />
 
       <div className="row py-1">
         <div className="col">
-          <Select label="Filtros" className="max-w-xs" onChange={(e) => handleSelectionChange(e, 'filtre')}>
+          <Select label="Filtros" className="max-w-xs" value={selection.filtre} onChange={(e) => handleSelectionChange(e, 'filter')}>
             {filtersData.map((a) => (
               <SelectItem key={a.value} value={a.value}>
                 {a.label}
@@ -62,10 +67,10 @@ export const Form: React.FC<FormProps> = props => {
           </Select>
         </div>
         <div className="col">
-          <Select label="Plantillas" className="max-w-xs" onChange={(e) => handleSelectionChange(e, 'filtre')}>
+          <Select label="Plantillas" className="max-w-xs" onChange={(e) => handleSelectionChange(e, 'template')}>
             {templatesData.map((a) => (
-              <SelectItem key={a.value} value={a.value}>
-                {a.label}
+              <SelectItem key={a.id} value={a.text}>
+                {a.text}
               </SelectItem>
             ))}
           </Select>
@@ -100,7 +105,7 @@ export const Form: React.FC<FormProps> = props => {
           showSteps={true}
           maxValue={100}
           minValue={10}
-          defaultValue={25}
+          defaultValue={20}
           className="max-w-md"
           onChange={(e) => handleSelectionChange(e, 'fontSize')}
         />

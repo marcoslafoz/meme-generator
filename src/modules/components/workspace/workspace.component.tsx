@@ -5,6 +5,7 @@ import { memeType } from '../../../types'
 import { DownloadButton } from '../download-button'
 import { CollectionModal } from '../collection/collection-modal.component'
 import { LikeButton } from '../like-btn/like-btn.component'
+import { templatesData } from '../../utils'
 
 export const defaultOptions: memeType = {
   filtre: '',
@@ -12,7 +13,9 @@ export const defaultOptions: memeType = {
   fontSize: 20,
   image: '',
   text: '',
-  fontFamily: 'Samsung Sharp Sans Regular'
+  fontFamily: 'Samsung Sharp Sans Regular',
+  template: '',
+  id: ''
 }
 
 export const Workspace: React.FC = () => {
@@ -38,6 +41,11 @@ export const Workspace: React.FC = () => {
   const handleClearCollection = () => {
     setMemeCollectionData([])
   }
+
+  useEffect(() => {
+    setOptions(templatesData.find(template => template.id === options.template) || options)
+  }, [options, options.template]);
+
 
   return (
     <div className="row justify-content-center px-3">

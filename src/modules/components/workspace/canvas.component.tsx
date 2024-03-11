@@ -1,9 +1,9 @@
 import React from 'react'
-import { optionsForm } from '../../../types'
+import { memeType } from '../../../types'
 import './workspace.css'
 
 interface CanvasProps {
-  options: optionsForm
+  options: memeType
 }
 
 export const Canvas: React.FC<CanvasProps> = props => {
@@ -16,7 +16,7 @@ export const Canvas: React.FC<CanvasProps> = props => {
 
       <div className="row ">
         <img
-          className='canvas-img p-0'
+          className='img-fluid canvas-img p-0'
           src={options.image || 'https://i.imgur.com/qSlGdmN.png'}
           alt='meme'
           style={{

@@ -1,20 +1,20 @@
 import React, { ChangeEvent, useState } from 'react'
 import { Select, SelectItem, Slider } from "@nextui-org/react"
 import { filtersData, fontFamilyData } from '../../utils/optionsData'
-import { optionsForm } from '../../../types'
+import { memeType } from '../../../types'
 import { defaultOptions } from './workspace.component'
 import { Input } from "@nextui-org/react"
 import './workspace.css'
 
 interface FormProps {
-  onSelectionChange: (selection: optionsForm) => void
+  onSelectionChange: (selection: memeType) => void
 }
 
 export const Form: React.FC<FormProps> = props => {
 
   const { onSelectionChange } = props
 
-  const [selection, setSelection] = useState<optionsForm>(defaultOptions)
+  const [selection, setSelection] = useState<memeType>(defaultOptions)
 
   const handleSelectionChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement> | number[] | number, type: string) => {
     const value =

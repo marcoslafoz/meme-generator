@@ -15,5 +15,4 @@ Desarrolla una aplicación web para la edición y creación de memes, permitiend
 - **Nivel Avanzado:** Amplía el sistema con características avanzadas como la integración de reconocimiento de texto para sugerir memes basados en subtítulos, la creación de perfiles de usuario para guardar memes favoritos, o la implementación de herramientas de análisis para rastrear la popularidad de los memes.
   
 ## toDO Tasks
-  - Boton de favoritos y que se añadan a collecion de memes, esa collecion de memes se abrira con un boton que abrira un modal, y se mostraran en un grid todos los memes, cada uno tendra un boton pequeño para poder descargarlo. en el componente workspace.component añadiremos un boton de like que al hacer onclick añadira los datos al array y al darle al boton de abrir el modal mostrara todos los memes que hay en el array con el boton de descargar
   - Descargar  fuentes, al descargar la foto no se descarga con la fuente porque no estan localmente

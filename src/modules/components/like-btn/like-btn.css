@@ -1,0 +1,23 @@
+.like-button {
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --bg-color-sub: #dedede;
+  --bg-color: #eee;
+  --main-color: #323232;
+
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  border-radius: 10px;
+  background-color: var(--bg-color-sub);
+}
+
+.like-button-img {
+  width: 20px;
+  margin: 5px;
+}

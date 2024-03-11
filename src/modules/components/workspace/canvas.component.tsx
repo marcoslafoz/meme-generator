@@ -12,11 +12,11 @@ export const Canvas: React.FC<CanvasProps> = props => {
 
   return (
 
-    <div className="col col-auto justify-content-center canvas-container mx-3" id='contentToExport'>
+    <div className="col justify-content-center canvas-container mx-3 p-0 " id='contentToExport'>
 
-      <div className="row ">
+      <div className="justify-content-center  p-0 m-0">
         <img
-          className='img-fluid canvas-img p-0'
+          className='img-fluid p-0 m-0 '
           src={options.image || 'https://i.imgur.com/qSlGdmN.png'}
           alt='meme'
           style={{
@@ -27,7 +27,7 @@ export const Canvas: React.FC<CanvasProps> = props => {
 
       {
         (options.text).trim() !== '' &&
-        <div className="row canvas-text p-2">
+        <div className="row canvas-text p-3">
           <p
             className='text-center'
             style={{

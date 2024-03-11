@@ -16,4 +16,3 @@ Desarrolla una aplicación web para la edición y creación de memes, permitiend
   
 ## toDO Tasks
   - Descargar  fuentes, al descargar la foto no se descarga con la fuente porque no estan localmente
-  - Arreglar tamaño de la imagen

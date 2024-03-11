@@ -81,7 +81,7 @@ export const Form: React.FC<FormProps> = props => {
         </div>
       </div>
 
-      <div className="row py-1 pb-4">
+      <div className="row py-1 mt-2 pb-4">
         <Slider
           size="md"
           step={5}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Canvas } from './canvas.component'
 import { Form } from './form.component'
 import { memeType } from '../../../types'
@@ -15,16 +15,28 @@ export const defaultOptions: memeType = {
   fontFamily: 'Samsung Sharp Sans Regular'
 }
 
-const memeCollectionData: memeType[] = []
-
 export const Workspace: React.FC = () => {
+  
+  const [options, setOptions] = useState<memeType>(defaultOptions)
+  
+  const [memeCollectionData, setMemeCollectionData] = useState<memeType[]>(() => {
+    const storedData = localStorage.getItem('memeCollectionData')
+    return storedData ? JSON.parse(storedData) : []
+  })
 
-  const [options, setOptions] = React.useState<memeType>(defaultOptions)
+  useEffect(() => {
+    localStorage.setItem('memeCollectionData', JSON.stringify(memeCollectionData))
+  }, [memeCollectionData])
 
   const handleSelectionChange = (selection: memeType) => setOptions(selection)
 
-  const handleLikeChange = () => {memeCollectionData.push(options) 
-    console.log(memeCollectionData)
+  const handleLikeChange = () => {
+    const updatedMemeCollectionData = [...memeCollectionData, options]
+    setMemeCollectionData(updatedMemeCollectionData)
+  }
+
+  const handleClearCollection = () => {
+    setMemeCollectionData([])
   }
 
   return (
@@ -32,7 +44,11 @@ export const Workspace: React.FC = () => {
       <div className="col col-auto pt-3 pb-3">
         <div className="row justify-content-center mb-3"><Canvas options={options} /></div>
         <div className="row "><Form onSelectionChange={handleSelectionChange} /></div>
-        <div className="row justify-content-center gap-3"><DownloadButton divIDToExport='contentToExport' fileName='meme-generator.png' /><CollectionModal memeCollection={memeCollectionData} /><LikeButton onLikeChange={handleLikeChange} /></div>
+        <div className="row justify-content-center gap-3">
+          <DownloadButton divIDToExport='contentToExport' fileName='meme-generator.png' />
+          <CollectionModal memeCollection={memeCollectionData} onClearCollection={handleClearCollection} />
+          <LikeButton onLikeChange={handleLikeChange} />
+        </div>
       </div>
     </div>
   )

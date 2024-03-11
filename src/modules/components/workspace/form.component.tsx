@@ -41,7 +41,7 @@ export const Form: React.FC<FormProps> = props => {
 
       <hr className='my-4' />
 
-      <div className="row py-1 pb-2 ">
+      <div className="row py-1">
         <div className="col">
           <Select label="Filtros" className="max-w-xs" onChange={(e) => handleSelectionChange(e, 'filtre')}>
             {filtersData.map((a) => (
@@ -52,7 +52,7 @@ export const Form: React.FC<FormProps> = props => {
           </Select>
         </div>
         <div className="col">
-          <Select label="Plantillas" className="max-w-xs" onChange={(e) => handleSelectionChange(e, 'animal')}>
+          <Select label="Plantillas" className="max-w-xs" onChange={(e) => handleSelectionChange(e, 'filtre')}>
             {filtersData.map((a) => (
               <SelectItem key={a.value} value={a.value}>
                 {a.label}

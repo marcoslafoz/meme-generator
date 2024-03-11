@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react'
 import { Select, SelectItem, Slider } from "@nextui-org/react"
-import { filtersData, fontFamilyData } from '../../utils/optionsData'
+import { filtersData, fontFamilyData, templatesData } from '../../utils/optionsData'
 import { memeType } from '../../../types'
 import { defaultOptions } from './workspace.component'
 import { Input } from "@nextui-org/react"
@@ -63,7 +63,7 @@ export const Form: React.FC<FormProps> = props => {
         </div>
         <div className="col">
           <Select label="Plantillas" className="max-w-xs" onChange={(e) => handleSelectionChange(e, 'filtre')}>
-            {filtersData.map((a) => (
+            {templatesData.map((a) => (
               <SelectItem key={a.value} value={a.value}>
                 {a.label}
               </SelectItem>
@@ -94,12 +94,12 @@ export const Form: React.FC<FormProps> = props => {
       <div className="row py-1 mt-2 pb-4">
         <Slider
           size="md"
-          step={5}
+          step={10}
           color='foreground'
           label="Tamaño de texto"
           showSteps={true}
-          maxValue={50}
-          minValue={15}
+          maxValue={100}
+          minValue={10}
           defaultValue={25}
           className="max-w-md"
           onChange={(e) => handleSelectionChange(e, 'fontSize')}

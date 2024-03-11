@@ -1,7 +1,7 @@
 import domtoimage from 'dom-to-image'
 
 export const handleExportClick = (id: string, fileName: string) => {
-  return () => { // Envuelve la función en otra función para manejar el evento
+  return () => { 
     const contentToExport = document.getElementById(id)
     if (contentToExport) {
       setTimeout(() => {

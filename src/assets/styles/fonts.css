@@ -20,3 +20,38 @@
   font-weight: normal;
   src: local('Samsung Sharp Sans Bold'), url(../../assets/fonts/samsungsharpsans-bold.woff) format('woff');
 }
+
+@font-face {
+  font-family: 'Bangers';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../../assets/fonts/Bangers-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../../assets/fonts/DancingScript-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Honk';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../../assets/fonts/Honk-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../../assets/fonts/LibreBaskerville-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../../assets/fonts/Montserrat-Regular.ttf) format('truetype');
+}

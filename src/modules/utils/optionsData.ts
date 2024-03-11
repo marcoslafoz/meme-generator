@@ -1,15 +1,3 @@
-export const animals = [
-  { value: 'dog', label: 'Dog', color: 'brown' },
-  { value: 'cat', label: 'Cat', color: 'gray' },
-  { value: 'bird', label: 'Bird', color: 'yellow' },
-]
-
-export const colors = [
-  { value: 'brown', label: 'Brown' },
-  { value: 'gray', label: 'Gray' },
-  { value: 'yellow', label: 'Yellow' },
-]
-
 export const filtersData = [
   { value: 'grayscale(100%)', label: 'Escala de grises' },
   { value: 'invert(100%)', label: 'Invertir' },
@@ -24,5 +12,8 @@ export const fontFamilyData = [
   { value: "'Honk', system-ui", label: 'Honk' },
   { value: "'Bangers', system-ui", label: 'Bangers' },
   { value: '"Libre Baskerville", serif', label: 'Baskerville' },
-  { value: '"Dancing Script", cursive', label: 'Dancing Script' }
+  { value: '"Dancing Script", cursive', label: 'Dancing Script' },
+  { value: '"Samsung Sharp Sans Medium", cursive', label: 'Samsung Sharp' }
 ]
+
+export const templatesData = [{ value: 'none', label: 'Sin plantillas' },]

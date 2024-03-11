@@ -13,6 +13,11 @@ interface CollectionItemProps {
 export const CollectionItem: React.FC<CollectionItemProps> = props => {
   const { meme, memeKey } = props
 
+  const handleTwitterButtonClick = () => {
+    const tweetText = encodeURIComponent("Crea tu propio meme con MemeGenerator a través de este enlace 🎨 https://meme-generator.lafoz.dev/");
+    window.open("https://twitter.com/intent/tweet?text=" + tweetText, "_blank");
+  }
+
   return (
     <>
       <div className="col col-auto meme-collection-item-container justify-content-center">
@@ -47,7 +52,7 @@ export const CollectionItem: React.FC<CollectionItemProps> = props => {
         <div className="row justify-content-center mt-2 gap-3">
           <DownloadButton divIDToExport={`memeCollectionItem${memeKey}`} fileName={"saved-meme"} />
           <div className='col col-auto p-0'>
-            <button className="twitter-button" type="button">
+            <button className="twitter-button" type="button" onClick={handleTwitterButtonClick}>
               <span><img className="twitter-button-img" src={TwitterIcon} alt='twitter' /></span>
             </button>
           </div>

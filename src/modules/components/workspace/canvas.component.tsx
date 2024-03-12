@@ -20,7 +20,7 @@ export const Canvas: React.FC<CanvasProps> = props => {
           src={options.image || 'https://i.imgur.com/qSlGdmN.png'}
           alt='meme'
           style={{
-            filter: options.filtre
+            filter: options.filter
           }}
         />
       </div>

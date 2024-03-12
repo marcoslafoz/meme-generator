@@ -8,7 +8,7 @@ import { LikeButton } from '../like-btn/like-btn.component'
 import { templatesData } from '../../utils'
 
 export const defaultOptions: memeType = {
-  filtre: '',
+  filter: '',
   fontColor: '',
   fontSize: 20,
   image: '',

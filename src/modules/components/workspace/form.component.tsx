@@ -58,7 +58,7 @@ export const Form: React.FC<FormProps> = props => {
 
       <div className="row py-1">
         <div className="col">
-          <Select label="Filtros" className="max-w-xs" value={selection.filtre} onChange={(e) => handleSelectionChange(e, 'filter')}>
+          <Select label="Filtros" className="max-w-xs" value={selection.filter} onChange={(e) => handleSelectionChange(e, 'filter')}>
             {filtersData.map((a) => (
               <SelectItem key={a.value} value={a.value}>
                 {a.label}

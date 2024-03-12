@@ -1,6 +1,6 @@
 export interface memeType {
   image: string
-  filtre: string
+  filter: string
   text: string
   fontColor: string
   fontSize: number

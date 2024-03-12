@@ -28,7 +28,7 @@ export const CollectionItem: React.FC<CollectionItemProps> = props => {
               src={meme.image || 'https://i.imgur.com/qSlGdmN.png'}
               alt='meme'
               style={{
-                filter: meme.filtre
+                filter: meme.filter
               }}
             />
           </div>

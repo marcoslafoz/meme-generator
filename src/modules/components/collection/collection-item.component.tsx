@@ -7,11 +7,11 @@ import TwitterIcon from '../../../assets/img/twitter.svg'
 
 interface CollectionItemProps {
   meme: memeType
-  memeKey: number
+  id: number
 }
 
 export const CollectionItem: React.FC<CollectionItemProps> = props => {
-  const { meme, memeKey } = props
+  const { meme, id: memeKey } = props
 
   const handleTwitterButtonClick = () => {
     const tweetText = encodeURIComponent("Crea tu propio meme con MemeGenerator a través de este enlace 🎨 https://meme-generator.lafoz.dev/")
@@ -26,7 +26,7 @@ export const CollectionItem: React.FC<CollectionItemProps> = props => {
             <img
               className='modal-canvas-img p-0'
               src={meme.image || 'https://i.imgur.com/qSlGdmN.png'}
-              alt='meme'
+              alt={meme.text}
               style={{
                 filter: meme.filter
               }}

@@ -15,11 +15,11 @@ export const Canvas: React.FC<CanvasProps> = props => {
 
     <div className="col justify-content-center workspace-canvas-container mx-3 p-0 " id='contentToExport'>
 
-      <div className="justify-content-center  p-0 m-0">
+      <div className="row ">
         <img
-          className='img-fluid p-0 m-0 '
+          className='workspace-canvas-img p-0'
           src={options.image || 'https://i.imgur.com/qSlGdmN.png'}
-          alt={options.text || defaultOptions.text}
+          alt={options.text}
           style={{
             filter: options.filter
           }}

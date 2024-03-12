@@ -95,7 +95,7 @@ export const CollectionModal: React.FC<CollectionModalProps> = props => {
                   memeCollection
                     .filter(m => m.text.toLowerCase().includes(searchTerm.toLowerCase()))
                     .map((m, index) => (
-                      <CollectionItem meme={m} key={index} memeKey={index} />
+                      <CollectionItem meme={m} key={index} id={index} />
                     ))
                 ) : (
                   <div>

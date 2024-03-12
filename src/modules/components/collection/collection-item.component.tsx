@@ -1,7 +1,7 @@
-import React from "react";
-import { memeType } from "../../../types";
+import React from "react"
+import { memeType } from "../../../types"
 import './collection.css'
-import { DownloadButton } from "../download-button";
+import { DownloadButton } from "../download-button"
 import TwitterIcon from '../../../assets/img/twitter.svg'
 
 
@@ -14,8 +14,8 @@ export const CollectionItem: React.FC<CollectionItemProps> = props => {
   const { meme, memeKey } = props
 
   const handleTwitterButtonClick = () => {
-    const tweetText = encodeURIComponent("Crea tu propio meme con MemeGenerator a través de este enlace 🎨 https://meme-generator.lafoz.dev/");
-    window.open("https://twitter.com/intent/tweet?text=" + tweetText, "_blank");
+    const tweetText = encodeURIComponent("Crea tu propio meme con MemeGenerator a través de este enlace 🎨 https://meme-generator.lafoz.dev/")
+    window.open("https://twitter.com/intent/tweet?text=" + tweetText, "_blank")
   }
 
   return (

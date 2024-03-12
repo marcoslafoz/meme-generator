@@ -5,7 +5,6 @@ import { memeType } from '../../../types'
 import { DownloadButton } from '../download-button'
 import { CollectionModal } from '../collection/collection-modal.component'
 import { LikeButton } from '../collection/like-btn.component'
-import { templatesData } from '../../utils'
 
 export const defaultOptions: memeType = {
   filter: '',

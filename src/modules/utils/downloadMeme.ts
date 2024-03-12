@@ -14,5 +14,5 @@ export const handleExportClick = (id: string, fileName: string) => {
           })
       }, 1)
     }
-  };
+  }
 }

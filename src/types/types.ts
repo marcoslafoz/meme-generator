@@ -6,6 +6,5 @@ export interface memeType {
   fontColor: string
   fontFamily: string
   filter: string
-  template: string
   category: string
 }

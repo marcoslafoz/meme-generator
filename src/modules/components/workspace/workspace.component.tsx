@@ -14,7 +14,6 @@ export const defaultOptions: memeType = {
   image: '',
   text: '',
   fontFamily: 'Samsung Sharp Sans Regular',
-  template: '',
   id: '',
   category: ''
 }
@@ -42,11 +41,6 @@ export const Workspace: React.FC = () => {
   const handleClearCollection = () => {
     setMemeCollectionData([])
   }
-
-  useEffect(() => {
-    setOptions(templatesData.find(template => template.id === options.template) || options)
-  }, [options, options.template]);
-
 
   return (
     <div className="row justify-content-center px-3">

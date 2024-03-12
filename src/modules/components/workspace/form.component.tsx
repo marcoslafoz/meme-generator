@@ -26,11 +26,16 @@ export const Form: React.FC<FormProps> = props => {
     onSelectionChange(updatedSelection)
   }
 
+
   const handleClearImage = () => {
     const clearedSelection = {
       ...selection,
-      image: '',
-      text: '',
+      image: defaultOptions.image,
+      text: defaultOptions.text,
+      filter: defaultOptions.filter,
+      fontSize: defaultOptions.fontSize,
+      fontFamily: defaultOptions.fontFamily,
+      fontColor: defaultOptions.fontColor
     }
     setSelection(clearedSelection)
     onSelectionChange(clearedSelection)
@@ -38,10 +43,29 @@ export const Form: React.FC<FormProps> = props => {
 
   const categories: string[] = templatesData.reduce((uniqueCategories: string[], item) => {
     if (!uniqueCategories.includes(item.category)) {
-      uniqueCategories.push(item.category);
+      uniqueCategories.push(item.category)
     }
-    return uniqueCategories;
-  }, []);
+    return uniqueCategories
+  }, [])
+
+  const handleTemplateChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+
+    const template = templatesData.find(data => data.id === event.target.value)
+
+    const templateSelection = {
+      ...selection,
+      image: template?.image || defaultOptions.image,
+      text: template?.text || defaultOptions.text,
+      filter: template?.filter || defaultOptions.filter,
+      fontSize: template?.fontSize || defaultOptions.fontSize,
+      fontFamily: template?.fontFamily || defaultOptions.fontFamily,
+      fontColor: template?.fontColor || defaultOptions.fontColor
+    }
+
+    setSelection(templateSelection)
+    onSelectionChange(templateSelection)
+  }
+
 
   return (
     <div className="col">
@@ -76,7 +100,7 @@ export const Form: React.FC<FormProps> = props => {
         </div>
 
         <div className="col">
-          <Select label="Plantillas" className="max-w-xs" onChange={(e) => handleSelectionChange(e, 'template')}>
+          <Select label="Plantillas" className="max-w-xs" onChange={handleTemplateChange}>
             {(categories).map((category) => (
               <SelectSection title={category} key={category}>
 

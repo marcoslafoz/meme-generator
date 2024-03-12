@@ -1,5 +1,6 @@
 import React from 'react'
 import { memeType } from '../../../types'
+import { defaultOptions } from './workspace.component'
 import './workspace.css'
 
 interface CanvasProps {
@@ -18,7 +19,7 @@ export const Canvas: React.FC<CanvasProps> = props => {
         <img
           className='img-fluid p-0 m-0 '
           src={options.image || 'https://i.imgur.com/qSlGdmN.png'}
-          alt='meme'
+          alt={options.text || defaultOptions.text}
           style={{
             filter: options.filter
           }}
@@ -31,9 +32,9 @@ export const Canvas: React.FC<CanvasProps> = props => {
           <p
             className='text-center'
             style={{
-              fontSize: options.fontSize || 20,
-              color: options.fontColor || '#e0e0e0',
-              fontFamily: options.fontFamily,
+              fontSize: options.fontSize || defaultOptions.fontSize,
+              color: options.fontColor || defaultOptions.fontColor,
+              fontFamily: options.fontFamily || defaultOptions.fontFamily,
             }}>
             {options.text}
           </p>

@@ -29,6 +29,7 @@ export const templatesData: memeType[] = [
     fontFamily: '"Dancing Script", cursive',
     fontSize: 30,
     template: '',
+    category: 'Clásicos'
   },
   {
     id: '2',
@@ -39,6 +40,7 @@ export const templatesData: memeType[] = [
     fontFamily: "'Bangers', system-ui",
     fontSize: 30,
     template: '',
+    category: 'Clásicos'
   },
   {
     id: '3',
@@ -49,5 +51,6 @@ export const templatesData: memeType[] = [
     fontFamily: '"Samsung Sharp Sans Medium"',
     fontSize: 30,
     template: '',
+    category: 'Blanco y negro'
   },
 ]

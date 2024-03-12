@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useState } from 'react'
-import { Select, SelectItem, Slider } from "@nextui-org/react"
+import { Avatar, Select, SelectItem, SelectSection, Slider } from "@nextui-org/react"
 import { filtersData, fontFamilyData, templatesData } from '../../utils/optionsData'
 import { memeType } from '../../../types'
 import { defaultOptions } from './workspace.component'
@@ -36,6 +36,13 @@ export const Form: React.FC<FormProps> = props => {
     onSelectionChange(clearedSelection)
   }
 
+  const categories: string[] = templatesData.reduce((uniqueCategories: string[], item) => {
+    if (!uniqueCategories.includes(item.category)) {
+      uniqueCategories.push(item.category);
+    }
+    return uniqueCategories;
+  }, []);
+
   return (
     <div className="col">
 
@@ -43,6 +50,7 @@ export const Form: React.FC<FormProps> = props => {
         <div className="col">
           <Input type="url" label="Imágen" size={'md'} placeholder="Introduzca la url de su imágen..." value={selection.image} onChange={(i) => handleSelectionChange(i, 'image')} />
         </div>
+
         <div className='col col-auto p-0 mr-2'>
           <button className="small-button" type="button" onClick={handleClearImage}>
             <span><img className="small-button-img" src={TrashCanIcon} alt='clear' /></span>
@@ -66,12 +74,25 @@ export const Form: React.FC<FormProps> = props => {
             ))}
           </Select>
         </div>
+
         <div className="col">
           <Select label="Plantillas" className="max-w-xs" onChange={(e) => handleSelectionChange(e, 'template')}>
-            {templatesData.map((a) => (
-              <SelectItem key={a.id} value={a.text}>
-                {a.text}
-              </SelectItem>
+            {(categories).map((category) => (
+              <SelectSection title={category} key={category}>
+
+                {templatesData.filter(item => item.category === category).map((a) => (
+
+                  <SelectItem key={a.id} textValue={a.text}>
+                    <div className="flex gap-2 items-center">
+                      <img className="inline-block w-10  rounded" src={a.image} alt="a"/>
+                      <div className="flex flex-col">
+                        <span className="text-small">{a.text}</span>
+                      </div>
+                    </div>
+                  </SelectItem>
+                ))}
+
+              </SelectSection>
             ))}
           </Select>
         </div>
@@ -79,12 +100,12 @@ export const Form: React.FC<FormProps> = props => {
 
       <div className="row py-1   align-items-center ">
         <div className="col">
-
           <div className="row align-items-center">
             <div className='col col-auto'>Color de texto:</div>
-            <div className='col col-auto'><Input className='color-input' defaultValue='#e0e0e0' type="color" size={'md'} placeholder="Introduzca la url de su imágen..." onChange={(e) => handleSelectionChange(e, 'fontColor')} /></div>
+            <div className='col col-auto'><Input className='color-input' type="color" size={'md'} placeholder="Introduzca la url de su imágen..." onChange={(e) => handleSelectionChange(e, 'fontColor')} /></div>
           </div>
         </div>
+
         <div className="col">
           <Select label="Tipografía" className="max-w-xs" onChange={(e) => handleSelectionChange(e, 'fontFamily')}>
             {fontFamilyData.map((a) => (

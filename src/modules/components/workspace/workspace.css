@@ -1,18 +1,15 @@
-.canvas-container {
+.workspace-canvas-container {
   border-radius: 8px;
+  overflow: hidden;
+  max-width: 450px;
   background-color: #303030;
 }
 
-.canvas-text {
-  overflow: hidden;
-  background-color: #303030;
-
-  p {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    color: #e0e0e0;
-  }
-
+.workspace-canvas-img {
+  border-radius: 8px;
+  max-height: 500px;
+  width: 100%;
+  object-fit: contain;
 }
 
 .color-input {

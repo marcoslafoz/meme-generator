@@ -21,10 +21,10 @@ export const CollectionItem: React.FC<CollectionItemProps> = props => {
   return (
     <>
       <div className="col col-auto meme-collection-item-container justify-content-center">
-        <div className='canvas-container' id={`memeCollectionItem${memeKey}`}>
+        <div className='modal-canvas-container' id={`memeCollectionItem${memeKey}`}>
           <div className="row ">
             <img
-              className='canvas-img p-0'
+              className='modal-canvas-img p-0'
               src={meme.image || 'https://i.imgur.com/qSlGdmN.png'}
               alt='meme'
               style={{
@@ -35,7 +35,7 @@ export const CollectionItem: React.FC<CollectionItemProps> = props => {
 
           {
             (meme.text).trim() !== '' &&
-            <div className="row canvas-text p-2">
+            <div className="row modal-canvas-text p-2">
               <p
                 className='text-center'
                 style={{

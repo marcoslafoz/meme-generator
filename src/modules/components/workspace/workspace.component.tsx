@@ -4,24 +4,25 @@ import { Form } from './form.component'
 import { memeType } from '../../../types'
 import { DownloadButton } from '../download-button'
 import { CollectionModal } from '../collection/collection-modal.component'
-import { LikeButton } from '../like-btn/like-btn.component'
+import { LikeButton } from '../collection/like-btn.component'
 import { templatesData } from '../../utils'
 
 export const defaultOptions: memeType = {
   filter: '',
-  fontColor: '',
+  fontColor: '#e0e0e0',
   fontSize: 20,
   image: '',
   text: '',
   fontFamily: 'Samsung Sharp Sans Regular',
   template: '',
-  id: ''
+  id: '',
+  category: ''
 }
 
 export const Workspace: React.FC = () => {
-  
+
   const [options, setOptions] = useState<memeType>(defaultOptions)
-  
+
   const [memeCollectionData, setMemeCollectionData] = useState<memeType[]>(() => {
     const storedData = localStorage.getItem('memeCollectionData')
     return storedData ? JSON.parse(storedData) : []

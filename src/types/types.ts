@@ -1,10 +1,11 @@
 export interface memeType {
-  image: string
-  filter: string
-  text: string
-  fontColor: string
-  fontSize: number
-  fontFamily: string
-  template: string
   id: string
+  image: string
+  text: string
+  fontSize: number
+  fontColor: string
+  fontFamily: string
+  filter: string
+  template: string
+  category: string
 }

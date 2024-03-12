@@ -12,7 +12,7 @@ export const Canvas: React.FC<CanvasProps> = props => {
 
   return (
 
-    <div className="col justify-content-center canvas-container mx-3 p-0 " id='contentToExport'>
+    <div className="col justify-content-center workspace-canvas-container mx-3 p-0 " id='contentToExport'>
 
       <div className="justify-content-center  p-0 m-0">
         <img
@@ -27,12 +27,12 @@ export const Canvas: React.FC<CanvasProps> = props => {
 
       {
         (options.text).trim() !== '' &&
-        <div className="row canvas-text p-3">
+        <div className="row p-3">
           <p
             className='text-center'
             style={{
-              fontSize: options.fontSize,
-              color: options.fontColor,
+              fontSize: options.fontSize || 20,
+              color: options.fontColor || '#e0e0e0',
               fontFamily: options.fontFamily,
             }}>
             {options.text}

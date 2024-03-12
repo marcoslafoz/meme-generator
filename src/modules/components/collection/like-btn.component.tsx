@@ -1,5 +1,5 @@
 import React from 'react'
-import './like-btn.css'
+import './collection.css'
 import likeIcon from '../../../assets/img/like.svg'
 import unlikeIcon from '../../../assets/img/unlike.svg'
 
@@ -20,8 +20,8 @@ export const LikeButton: React.FC<LikeButtonProps> = props => {
 
   return (
     <div className='col col-auto p-0'>
-      <button className="like-button" type="button" onClick={handleLikeClick}>
-        <span><img className="like-button-img" src={like ? likeIcon : unlikeIcon} alt='like' /></span>
+      <button className="small-button" type="button" onClick={handleLikeClick}>
+        <span><img className="small-button-img" src={like ? likeIcon : unlikeIcon} alt='like' /></span>
       </button>
     </div>
   )

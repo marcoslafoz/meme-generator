@@ -6,7 +6,7 @@ import { DownloadButton } from '../download-button'
 import { CollectionModal } from '../collection/collection-modal.component'
 import { LikeButton } from '../collection/like-btn.component'
 
-export const defaultOptions: memeType = {
+export const defaultMemeOptions: memeType = {
   filter: '',
   fontColor: '#e0e0e0',
   fontSize: 20,
@@ -19,7 +19,7 @@ export const defaultOptions: memeType = {
 
 export const Workspace: React.FC = () => {
 
-  const [options, setOptions] = useState<memeType>(defaultOptions)
+  const [meme, setMeme] = useState<memeType>(defaultMemeOptions)
 
   const [memeCollectionData, setMemeCollectionData] = useState<memeType[]>(() => {
     const storedData = localStorage.getItem('memeCollectionData')
@@ -30,10 +30,10 @@ export const Workspace: React.FC = () => {
     localStorage.setItem('memeCollectionData', JSON.stringify(memeCollectionData))
   }, [memeCollectionData])
 
-  const handleSelectionChange = (selection: memeType) => setOptions(selection)
+  const handleSelectionChange = (selection: memeType) => setMeme(selection)
 
   const handleLikeChange = () => {
-    const updatedMemeCollectionData = [...memeCollectionData, options]
+    const updatedMemeCollectionData = [...memeCollectionData, meme]
     setMemeCollectionData(updatedMemeCollectionData)
   }
 
@@ -42,12 +42,12 @@ export const Workspace: React.FC = () => {
   }
 
   return (
-    <div className="row justify-content-center px-3">
-      <div className="col col-auto pt-3 pb-3">
-        <div className="row justify-content-center mb-3"><Canvas options={options} /></div>
-        <div className="row "><Form onSelectionChange={handleSelectionChange} /></div>
-        <div className="row justify-content-center gap-3">
-          <DownloadButton divIDToExport='contentToExport' memeName={options.text} />
+    <div className="row justify-content-center">
+      <div className="col col-auto">
+        <div className="row mb-3 px-3 justify-content-center"><Canvas meme={meme} /></div>
+        <div className="row"><Form onSelectionChange={handleSelectionChange} /></div>
+        <div className="row mt-3 justify-content-center gap-3">
+          <DownloadButton divIDToExport='contentToExport' memeName={meme.text} />
           <CollectionModal memeCollection={memeCollectionData} onClearCollection={handleClearCollection} />
           <LikeButton onLikeChange={handleLikeChange} />
         </div>

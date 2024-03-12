@@ -6,10 +6,7 @@
 }
 
 .workspace-canvas-img {
-  border-radius: 8px;
   max-height: 500px;
-  width: 100%;
-  object-fit: contain;
 }
 
 .color-input {

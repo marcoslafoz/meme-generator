@@ -1,42 +1,42 @@
 import React from 'react'
 import { memeType } from '../../../types'
-import { defaultOptions } from './workspace.component'
+import { defaultMemeOptions } from './workspace.component'
 import './workspace.css'
 
 interface CanvasProps {
-  options: memeType
+  meme: memeType
 }
 
 export const Canvas: React.FC<CanvasProps> = props => {
 
-  const { options } = props
+  const { meme } = props
 
   return (
 
-    <div className="col justify-content-center workspace-canvas-container mx-3 p-0 " id='contentToExport'>
+    <div className="col justify-content-center workspace-canvas-container p-0 " id='contentToExport'>
 
       <div className="row ">
         <img
           className='workspace-canvas-img p-0'
-          src={options.image || 'https://i.imgur.com/qSlGdmN.png'}
-          alt={options.text}
+          src={meme.image || 'https://i.imgur.com/qSlGdmN.png'}
+          alt={meme.text}
           style={{
-            filter: options.filter
+            filter: meme.filter
           }}
         />
       </div>
 
       {
-        (options.text).trim() !== '' &&
+        (meme.text).trim() !== '' &&
         <div className="row p-3">
           <p
             className='text-center'
             style={{
-              fontSize: options.fontSize || defaultOptions.fontSize,
-              color: options.fontColor || defaultOptions.fontColor,
-              fontFamily: options.fontFamily || defaultOptions.fontFamily,
+              fontSize: meme.fontSize || defaultMemeOptions.fontSize,
+              color: meme.fontColor || defaultMemeOptions.fontColor,
+              fontFamily: meme.fontFamily || defaultMemeOptions.fontFamily,
             }}>
-            {options.text}
+            {meme.text}
           </p>
         </div>
       }

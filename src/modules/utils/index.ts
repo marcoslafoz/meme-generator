@@ -1,3 +1,3 @@
 export * from './reportWebVitals'
-export * from './optionsData'
+export * from './data'
 export * from './downloadMeme'

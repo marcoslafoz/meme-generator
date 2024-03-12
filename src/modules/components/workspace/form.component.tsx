@@ -1,8 +1,8 @@
 import React, { ChangeEvent, useState } from 'react'
 import { Select, SelectItem, SelectSection, Slider } from "@nextui-org/react"
-import { filtersData, fontFamilyData, templatesData } from '../../utils/optionsData'
+import { filtersData, fontFamilyData, templatesData } from '../../utils/data'
 import { memeType } from '../../../types'
-import { defaultOptions } from './workspace.component'
+import { defaultMemeOptions } from './workspace.component'
 import { Input } from "@nextui-org/react"
 import TrashCanIcon from '../../../assets/img/trash-can.svg'
 import './workspace.css'
@@ -13,7 +13,7 @@ interface FormProps {
 
 export const Form: React.FC<FormProps> = props => {
   const { onSelectionChange } = props
-  const [selection, setSelection] = useState<memeType>(defaultOptions)
+  const [selection, setSelection] = useState<memeType>(defaultMemeOptions)
 
   const handleSelectionChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement> | number[] | number, type: string) => {
     const value =
@@ -30,12 +30,12 @@ export const Form: React.FC<FormProps> = props => {
   const handleClearImage = () => {
     const clearedSelection = {
       ...selection,
-      image: defaultOptions.image,
-      text: defaultOptions.text,
-      filter: defaultOptions.filter,
-      fontSize: defaultOptions.fontSize,
-      fontFamily: defaultOptions.fontFamily,
-      fontColor: defaultOptions.fontColor
+      image: defaultMemeOptions.image,
+      text: defaultMemeOptions.text,
+      filter: defaultMemeOptions.filter,
+      fontSize: defaultMemeOptions.fontSize,
+      fontFamily: defaultMemeOptions.fontFamily,
+      fontColor: defaultMemeOptions.fontColor
     }
     setSelection(clearedSelection)
     onSelectionChange(clearedSelection)
@@ -54,12 +54,12 @@ export const Form: React.FC<FormProps> = props => {
 
     const templateSelection = {
       ...selection,
-      image: template?.image || defaultOptions.image,
-      text: template?.text || defaultOptions.text,
-      filter: template?.filter || defaultOptions.filter,
-      fontSize: template?.fontSize || defaultOptions.fontSize,
-      fontFamily: template?.fontFamily || defaultOptions.fontFamily,
-      fontColor: template?.fontColor || defaultOptions.fontColor
+      image: template?.image || defaultMemeOptions.image,
+      text: template?.text || defaultMemeOptions.text,
+      filter: template?.filter || defaultMemeOptions.filter,
+      fontSize: template?.fontSize || defaultMemeOptions.fontSize,
+      fontFamily: template?.fontFamily || defaultMemeOptions.fontFamily,
+      fontColor: template?.fontColor || defaultMemeOptions.fontColor
     }
 
     setSelection(templateSelection)
@@ -70,7 +70,7 @@ export const Form: React.FC<FormProps> = props => {
   return (
     <div className="col">
 
-      <div className="row py-1 align-items-center pr-2 ">
+      <div className="row align-items-center pr-2 ">
         <div className="col">
           <Input type="url" label="Imágen" size={'md'} placeholder="Introduzca la url de su imágen..." value={selection.image} onChange={(i) => handleSelectionChange(i, 'image')} />
         </div>
@@ -82,7 +82,7 @@ export const Form: React.FC<FormProps> = props => {
         </div>
       </div>
 
-      <div className="row py-1">
+      <div className="row mt-2 my-1">
         <Input type="text" label="Texto" size={'md'} placeholder="Introduzca su texto..." value={selection.text} onChange={(t) => handleSelectionChange(t, 'text')} />
       </div>
 
@@ -141,7 +141,7 @@ export const Form: React.FC<FormProps> = props => {
         </div>
       </div>
 
-      <div className="row py-1 mt-2 pb-4">
+      <div className="row py-1 mt-2 ">
         <Slider
           size="md"
           step={10}

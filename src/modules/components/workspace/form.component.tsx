@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useState } from 'react'
-import { Avatar, Select, SelectItem, SelectSection, Slider } from "@nextui-org/react"
+import { Select, SelectItem, SelectSection, Slider } from "@nextui-org/react"
 import { filtersData, fontFamilyData, templatesData } from '../../utils/optionsData'
 import { memeType } from '../../../types'
 import { defaultOptions } from './workspace.component'
@@ -80,13 +80,13 @@ export const Form: React.FC<FormProps> = props => {
             {(categories).map((category) => (
               <SelectSection title={category} key={category}>
 
-                {templatesData.filter(item => item.category === category).map((a) => (
+                {templatesData.filter(meme => meme.category === category).map((memeByCategory) => (
 
-                  <SelectItem key={a.id} textValue={a.text}>
+                  <SelectItem key={memeByCategory.id} textValue={memeByCategory.text}>
                     <div className="flex gap-2 items-center">
-                      <img className="inline-block w-10  rounded" src={a.image} alt="a"/>
+                      <img className="inline-block w-10  rounded" src={memeByCategory.image} alt="a" />
                       <div className="flex flex-col">
-                        <span className="text-small">{a.text}</span>
+                        <span className="text-small">{memeByCategory.text}</span>
                       </div>
                     </div>
                   </SelectItem>

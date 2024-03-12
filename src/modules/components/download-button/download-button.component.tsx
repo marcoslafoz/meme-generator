@@ -4,12 +4,11 @@ import { handleExportClick } from '../../utils'
 
 interface DownloadButtonProps {
   divIDToExport: string
-  fileName: string
-
+  memeName: string
 }
 
 export const DownloadButton: React.FC<DownloadButtonProps> = props => {
-  const { divIDToExport, fileName } = props
+  const { divIDToExport, memeName: fileName } = props
   
   return (
     <button className="download_button" type="button" onClick={handleExportClick(divIDToExport, fileName)}>

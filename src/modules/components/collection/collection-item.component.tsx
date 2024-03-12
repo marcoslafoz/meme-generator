@@ -50,7 +50,7 @@ export const CollectionItem: React.FC<CollectionItemProps> = props => {
         </div>
 
         <div className="row justify-content-center mt-2 gap-3">
-          <DownloadButton divIDToExport={`memeCollectionItem${memeKey}`} fileName={"saved-meme"} />
+          <DownloadButton divIDToExport={`memeCollectionItem${memeKey}`} memeName={meme.text} />
           <div className='col col-auto p-0'>
             <button className="small-button" type="button" onClick={handleTwitterButtonClick}>
               <span><img className="small-button-img" src={TwitterIcon} alt='twitter' /></span>

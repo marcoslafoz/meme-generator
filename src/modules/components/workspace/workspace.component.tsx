@@ -47,7 +47,7 @@ export const Workspace: React.FC = () => {
         <div className="row justify-content-center mb-3"><Canvas options={options} /></div>
         <div className="row "><Form onSelectionChange={handleSelectionChange} /></div>
         <div className="row justify-content-center gap-3">
-          <DownloadButton divIDToExport='contentToExport' fileName='meme-generator.png' />
+          <DownloadButton divIDToExport='contentToExport' memeName={options.text} />
           <CollectionModal memeCollection={memeCollectionData} onClearCollection={handleClearCollection} />
           <LikeButton onLikeChange={handleLikeChange} />
         </div>

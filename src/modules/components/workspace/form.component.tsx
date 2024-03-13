@@ -5,7 +5,6 @@ import { memeType } from '../../../types'
 import { defaultMemeOptions } from './workspace.component'
 import { Input } from "@nextui-org/react"
 import TrashCanIcon from '../../../assets/img/trash-can.svg'
-import Logo from '../../../assets/img/logo.png'
 import './workspace.css'
 
 interface FormProps {

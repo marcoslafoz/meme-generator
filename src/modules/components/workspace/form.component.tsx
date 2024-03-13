@@ -134,7 +134,7 @@ export const Form: React.FC<FormProps> = props => {
           <Select label="Tipografía" className="max-w-xs" onChange={(e) => handleSelectionChange(e, 'fontFamily')}>
             {fontFamilyData.map((a) => (
               <SelectItem key={a.value} value={a.value}>
-                {a.label}
+                <span style={{ fontFamily: a.value }}>{a.label}</span>
               </SelectItem>
             ))}
           </Select>

@@ -15,4 +15,4 @@ Desarrolla una aplicación web para la edición y creación de memes, permitiend
 - **Nivel Avanzado:** Amplía el sistema con características avanzadas como la integración de reconocimiento de texto para sugerir memes basados en subtítulos, la creación de perfiles de usuario para guardar memes favoritos, o la implementación de herramientas de análisis para rastrear la popularidad de los memes.
 
 ## toDO's Tasks
-- Arreglar templates
+- Añadir más templates

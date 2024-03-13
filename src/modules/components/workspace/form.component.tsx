@@ -27,7 +27,7 @@ export const Form: React.FC<FormProps> = props => {
   }
 
 
-  const handleClearImage = () => {
+  const handleClearMeme = () => {
     const clearedSelection = {
       ...selection,
       image: defaultMemeOptions.image,
@@ -76,7 +76,7 @@ export const Form: React.FC<FormProps> = props => {
         </div>
 
         <div className='col col-auto p-0 mr-2'>
-          <button className="small-button" type="button" onClick={handleClearImage}>
+          <button className="small-button" type="button" onClick={handleClearMeme}>
             <span><img className="small-button-img" src={TrashCanIcon} alt='clear' /></span>
           </button>
         </div>

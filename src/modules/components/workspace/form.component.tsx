@@ -5,11 +5,19 @@ import { memeType } from '../../../types'
 import { defaultMemeOptions } from './workspace.component'
 import { Input } from "@nextui-org/react"
 import TrashCanIcon from '../../../assets/img/trash-can.svg'
+import Logo from '../../../assets/img/logo.png'
 import './workspace.css'
 
 interface FormProps {
   onSelectionChange: (selection: memeType) => void
 }
+
+const categories: string[] = templatesData.reduce((uniqueCategories: string[], item) => {
+  if (!uniqueCategories.includes(item.category)) {
+    uniqueCategories.push(item.category)
+  }
+  return uniqueCategories
+}, [])
 
 export const Form: React.FC<FormProps> = props => {
   const { onSelectionChange } = props
@@ -40,13 +48,6 @@ export const Form: React.FC<FormProps> = props => {
     setSelection(clearedSelection)
     onSelectionChange(clearedSelection)
   }
-
-  const categories: string[] = templatesData.reduce((uniqueCategories: string[], item) => {
-    if (!uniqueCategories.includes(item.category)) {
-      uniqueCategories.push(item.category)
-    }
-    return uniqueCategories
-  }, [])
 
   const handleTemplateChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
 
@@ -91,9 +92,14 @@ export const Form: React.FC<FormProps> = props => {
       <div className="row py-1">
         <div className="col">
           <Select label="Filtros" className="max-w-xs" value={selection.filter} onChange={(e) => handleSelectionChange(e, 'filter')}>
-            {filtersData.map((a) => (
-              <SelectItem key={a.value} value={a.value}>
-                {a.label}
+            {filtersData.map((f) => (
+              <SelectItem key={f.value} textValue={f.label}>
+                <div className="flex gap-2 items-center">
+                  <img className="inline-block w-10 h-10 rounded" style={{ filter: f.value }} src={f.preview} alt={f.label} />
+                  <div className="flex flex-col">
+                    <span className="text-small">{f.label}</span>
+                  </div>
+                </div>
               </SelectItem>
             ))}
           </Select>

@@ -1,12 +1,10 @@
 import { memeType } from "../../types"
 
 export const filtersData = [
-  { value: 'grayscale(100%)', label: 'Escala de grises' },
-  { value: 'invert(100%)', label: 'Invertir' },
-  { value: 'blur(3px)', label: 'Efecto borroso' },
-  { value: 'sepia(100%)', label: 'Efecto sepia' },
-  { value: 'hue-rotate(90deg)', label: 'Rotación HUE' },
-  { value: 'none', label: 'Ninguno' },
+  { value: 'grayscale(100%)', label: 'Escala de grises', preview: 'https://i.imgur.com/y8MtGjj.png' },
+  { value: 'invert(100%)', label: 'Invertir', preview: 'https://i.imgur.com/y8MtGjj.png' },
+  { value: 'blur(3px)', label: 'Efecto borroso', preview: 'https://i.imgur.com/y8MtGjj.png' },
+  { value: 'sepia(100%)', label: 'Efecto sepia', preview: 'https://i.imgur.com/y8MtGjj.png' },
 ]
 
 export const fontFamilyData = [
@@ -42,12 +40,82 @@ export const templatesData: memeType[] = [
   },
   {
     id: '3',
-    text: '???',
-    image: 'https://img2.rtve.es/im/5805132/?w=900',
+    text: 'Programadores vs diseñadores',
+    image: 'https://www.boredpanda.es/blog/wp-content/uploads/2022/03/03-6228a2ac81c49_hwurhp7crzf81-png__700-622b13a1722c6__700.jpg',
     filter: '',
     fontColor: '',
-    fontFamily: '"Samsung Sharp Sans Medium"',
-    fontSize: 30,
-    category: 'Blanco y negro'
+    fontFamily: '',
+    fontSize: 20,
+    category: 'Programadores'
+  },
+  {
+    id: '4',
+    text: 'Suele pasar',
+    image: 'https://www.boredpanda.es/blog/wp-content/uploads/2022/03/6229d0a15a6c7-png__700.jpg',
+    filter: '',
+    fontColor: '',
+    fontFamily: '',
+    fontSize: 20,
+    category: 'Programadores'
+  },
+  {
+    id: '5',
+    text: 'Facts',
+    image: 'https://pbs.twimg.com/media/FBk1cgFWUAQj3oj.png',
+    filter: '',
+    fontColor: '',
+    fontFamily: '',
+    fontSize: 20,
+    category: 'Programadores'
+  },
+  {
+    id: '6',
+    text: 'Cuando te toca actualizar una expresión regular',
+    image: 'https://i.blogs.es/e666ec/actualizar-expresion-regular/450_1000.webp',
+    filter: '',
+    fontColor: '',
+    fontFamily: '',
+    fontSize: 20,
+    category: 'Programadores'
+  },
+  {
+    id: '7',
+    text: 'x: No estabas a dienta. Yo:',
+    image: 'https://i.pinimg.com/736x/f6/1b/a1/f61ba16a1e22778b130c7bdf5d94a02b.jpg',
+    filter: '',
+    fontColor: '',
+    fontFamily: '',
+    fontSize: 20,
+    category: 'Animales'
+  },
+  {
+    id: '8',
+    text: '2 clásicos',
+    image: 'https://images7.memedroid.com/images/UPLOADED711/5eb5e71bf2d87.jpeg',
+    filter: '',
+    fontColor: '',
+    fontFamily: '',
+    fontSize: 20,
+    category: 'Animales'
+  },
+  {
+    id: '9',
+    text: 'Minecraft',
+    image: 'https://i.kym-cdn.com/photos/images/original/001/554/624/92d.jpg',
+    filter: '',
+    fontColor: '',
+    fontFamily: '',
+    fontSize: 20,
+    category: 'Videojuegos'
+  },
+  {
+    id: '10',
+    text: 'Ah shit, here we go again',
+    image: 'https://www.nme.com/wp-content/uploads/2021/11/gta-the-trilogy-here-we-go-again-2000x1270-1.jpg',
+    filter: '',
+    fontColor: '',
+    fontFamily: '',
+    fontSize: 20,
+    category: 'Videojuegos'
   },
 ]
